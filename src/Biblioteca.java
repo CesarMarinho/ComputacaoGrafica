@@ -42,6 +42,14 @@ abstract class Biblioteca {
 		return r;
 	}	
 	
+	public static Vetor NormalizacaoVetor(Vetor a){
+		double n = NormaVetor(a);
+		double x = a.getx()/n;
+		double y = a.gety()/n;
+		double z = a.getz()/n;
+		Vetor r = new Vetor(x,y,z);
+		return r;
+	}
 
 //	public static double ProdutoVetorialVetores(Vetor a, Vetor b){
 //		
