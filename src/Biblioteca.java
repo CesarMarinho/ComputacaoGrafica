@@ -51,8 +51,13 @@ abstract class Biblioteca {
 		return r;
 	}
 
-//	public static double ProdutoVetorialVetores(Vetor a, Vetor b){
-//		
-//	}
+	public static Vetor ProdutoVetorial(Vetor a, Vetor b){
+		double x, y, z;
+		x = ( a.gety() * b.getz() )-( a.getz() * b.gety() );
+		y = ( a.getz() * b.getx() )-( a.getx() * b.getz() );
+		z = ( a.getx() * b.gety() )-( a.gety() * b.getx() );
+		Vetor r = new Vetor(x,y,z);
+		return r;
+	}
 	
 }
