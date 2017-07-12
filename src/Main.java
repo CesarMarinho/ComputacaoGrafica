@@ -27,7 +27,7 @@ public class Main extends JPanel {
 		aux2 = new String();
 		
 		try {
-			FileReader arq = new FileReader("seila.txt");
+			FileReader arq = new FileReader("objeto.txt");
 			BufferedReader lerArq = new BufferedReader(arq);
 			
 			aux = lerArq.readLine();
@@ -74,10 +74,6 @@ public class Main extends JPanel {
 			for(int i=0;i<nCoordinates;i++){
 				coordinates.add(mesh.get(i));
 				normCoordinates.add(mesh.get(i));
-//				double xn = ((mesh.get(i).getX()-xMin)/(xMax - xMin))*(599);
-//				double yn = ((mesh.get(i).getY()-yMin)/(yMax - yMin))*(599);
-//				normCoordinates.get(i).setX(xn);				
-//				normCoordinates.get(i).setY(yn);
 				
 				if(mesh.get(i).getX() < xMin) xMin = mesh.get(i).getX();
 				else if(mesh.get(i).getX() > xMax) xMax = mesh.get(i).getX();
@@ -93,11 +89,8 @@ public class Main extends JPanel {
 				normCoordinates.get(i).setX(xn);				
 				normCoordinates.get(i).setY(yn);
 			}
-			System.out.println(coordinates.toString());	
-			System.out.println(normCoordinates.toString());
-//			System.out.println(indexes.toString());	
-//			System.out.println(nCoordinates+" "+ nIndexes);
-//			System.out.println(xMin+" "+xMax+" "+yMin+" "+yMax);
+//			System.out.println(coordinates.toString());	
+//			System.out.println(normCoordinates.toString());
 			
 		}
 		catch (IOException e) {
@@ -128,7 +121,7 @@ public class Main extends JPanel {
 	
 	private static void createAndShowBlackScreen()
     {
-        JFrame frame = new JFrame("SSCCE");
+        JFrame frame = new JFrame("Objeto");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.add( new Main() );
         frame.setLocationByPlatform( true );

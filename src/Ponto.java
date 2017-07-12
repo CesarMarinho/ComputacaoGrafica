@@ -1,4 +1,4 @@
-import java.util.LinkedList;
+
 
 public class Ponto {
 	private double x;
@@ -38,19 +38,6 @@ public class Ponto {
 	@Override
 	public String toString() {
 		return "Ponto [x=" + x + ", y=" + y + ", z=" + z + "]";
-	}
-	
-	public void prdouble(){
-		System.out.println(x+" "+y+" "+z);
-	}
-	
-	public void printPixel(){		//Tenho que testar ¬¬'
-		LinkedList <Double> nio = new LinkedList<Double>();
-		nio.add(5.0);
-		nio.add(6.0);
-		nio.add(7.0);
-		System.out.println(nio);
-	}
-	
+	}	
 	
 }
